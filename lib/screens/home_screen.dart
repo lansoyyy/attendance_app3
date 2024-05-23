@@ -131,7 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           trailing: TextWidget(
-                            text: 'Date and Time',
+                            text: DateFormat.yMMMd()
+                                .add_jm()
+                                .format(data.docs[index]['dateTime'].toDate()),
                             fontSize: 14,
                             fontFamily: 'Medium',
                           ),
