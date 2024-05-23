@@ -113,15 +113,19 @@ class _HomeScreenState extends State<HomeScreen> {
                             Icons.account_circle,
                           ),
                           title: TextWidget(
+                            align: TextAlign.start,
+                            maxLines: 3,
                             text:
-                                'This student is possibly involved in an earthquake event',
-                            fontSize: 18,
+                                'This student is possibly involved in an earthquake event.',
+                            fontSize: 14,
                             fontFamily: 'Bold',
+                            color: Colors.red,
                           ),
                           subtitle: TextWidget(
+                            align: TextAlign.start,
                             text: 'Student: ${data.docs[index]['name']}',
-                            fontSize: 18,
-                            fontFamily: 'Bold',
+                            fontSize: 12,
+                            fontFamily: 'Regular',
                           ),
                           trailing: TextWidget(
                             text: DateFormat.yMMMd()
