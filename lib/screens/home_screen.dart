@@ -109,26 +109,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       itemBuilder: (context, index) {
                         return ListTile(
-                          leading: SizedBox(
-                            width: 300,
-                            height: 50,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const Icon(
-                                  Icons.account_circle,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                TextWidget(
-                                  text: data.docs[index]['name'],
-                                  fontSize: 18,
-                                  fontFamily: 'Bold',
-                                ),
-                              ],
-                            ),
+                          leading: const Icon(
+                            Icons.account_circle,
+                          ),
+                          title: TextWidget(
+                            text:
+                                'This student is possibly involved in an earthquake event',
+                            fontSize: 18,
+                            fontFamily: 'Bold',
+                          ),
+                          subtitle: TextWidget(
+                            text: 'Student: ${data.docs[index]['name']}',
+                            fontSize: 18,
+                            fontFamily: 'Bold',
                           ),
                           trailing: TextWidget(
                             text: DateFormat.yMMMd()
